@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puma Accessories Store</title>
+    <style>
+        /* Internal CSS Styles */
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #080504; /* Puma red/orange color */
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .product-card {
+            background-color: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-img {
+            width: 100%;
+            height: auto;
+            max-height: 200px;
+            object-fit: contain;
+            margin-bottom: 10px;
+        }
+
+        .product-title {
+            font-size: 1.1em;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .product-price {
+            color: #ff4100;
+            font-size: 1em;
+            margin-bottom: 10px;
+        }
+
+        .buy-btn {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 0.8em;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Puma Accessories</h1>
+    </header>
+
+    <div class="container">
+        <div class="product-grid">
+            <!-- Product 1: Puma Cap (Placeholder Image) -->
+            <div class="product-card">
+                <!-- Placeholder for an actual Puma cap image (use online converter to generate base64 string) -->
+                <img src="data:image/jpeg;base64,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">
+                <div class="product-title">Puma Running Cap</div>
+                <div class="product-price">$25.00</div>
+                <a href="#" class="buy-btn">Buy Now</a>
+            </div>
+
+            <!-- Product 2: Puma Backpack (Placeholder Image) -->
+            <div class="product-card">
+                <!-- Placeholder for an actual Puma backpack image (use online converter to generate base64 string) -->
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVLeKPQ4d5fSJZ9jhLKgGoDCQh-xCG1oQwkQ&s" alt="Puma Backpack" class="product-img">
+                <div class="product-title">Puma Phase Backpack</div>
+                <div class="product-price">$45.00</div>
+                <a href="#" class="buy-btn">Buy Now</a>
+            </div>
+
+            <!-- Product 3: Puma Socks (Placeholder Image) -->
+            <div class="product-card">
+                <!-- Placeholder for an actual Puma socks image (use online converter to generate base64 string) -->
+                <img src="data:image/jpeg;base64,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">
+                <div class="product-title">Puma Crew Socks (3-Pack)</div>
+                <div class="product-price">$18.00</div>
+                <a href="#" class="buy-btn">Buy Now</a>
+            </div>
+
+             <!-- Product 4: Puma Water Bottle (Placeholder Image) -->
+             <div class="product-card">
+                <!-- Placeholder for an actual Puma water bottle image (use online converter to generate base64 string) -->
+                <img src="https://static.fabrik.io/17gm/5f4e7ca4a81058f.png?lossless=1&w=720&fit=max&s=260fc4ac5bf854e2dcb2be40dfcabdc3" class="product-img">
+                <div class="product-title">Puma Water Bottle</div>
+                <div class="product-price">$15.00</div>
+                <a href="#" class="buy-btn">Buy Now</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 Puma Accessories Store
+    </footer>
+
+</body>
+</html>
